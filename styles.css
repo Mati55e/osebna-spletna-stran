@@ -1,0 +1,210 @@
+:root {
+    --main-padding: 15px;
+}
+
+body {
+    /* background: rgb(0,0,0); */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,1) 0%, rgba(34,34,34,1) 5%, rgba(69,72,79,1) 20%, rgba(69,72,79,1) 80%, rgba(34,34,34,1) 95%, rgba(0,0,0,1) 100%);
+    background-color: rgb(158, 158, 158);
+    min-width: 375px;
+}
+
+.text-container {
+    width: 100%;
+    text-justify: distribute;
+}
+
+.presentation {
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.pic-style {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 55px;
+    border-width: 0;
+    box-shadow: 5px 5px 7px rgb(109, 109, 109);
+}
+
+.buttons {
+    height: 65px;
+    font-size: 25px;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    width: 85%;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 3px;
+    vertical-align: center;
+}
+
+.button-container {
+    width: 100%;
+    border-width: 3px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+    row-gap: 14px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .svg-github {
+    mask: url(/icons/github-142-svgrepo-com.svg);
+} */
+
+.button-svg {
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    padding-right: 30px;
+    vertical-align: middle;
+    /* background: red; */
+    mask-size: cover;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg) brightness(104%) contrast(101%);
+}
+
+a {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    height: 65px;
+    font-size: 25px;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    width: 85%;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 3px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.main-container {
+    width: 310px;
+    height: 100%;
+    flex-direction: column;
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* xs */
+@media (min-width: 475px) {
+       .main-container {
+        max-width: 475px;
+        width: 400px;
+       } 
+}
+
+/* sm */
+@media (min-width: 648px) {
+    .main-container {
+        max-width: 648px;
+        width: 600px;
+    } 
+}
+
+/* md */
+@media (min-width: 768px) {
+    .main-container {
+     max-width: 768px;
+     width: 700px;
+    } 
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .main-container {
+     max-width: 1024px;
+    } 
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .main-container {
+     max-width: 1280px;
+    } 
+}
+
+/* xxl */
+@media (min-width: 1536px) {
+    .main-container {
+        flex-direction: row;
+        column-gap: 80px;
+        width: 100%;
+        padding: 0;
+    }
+    body {
+        height: 100vh;
+    }
+
+    .text-container {
+        max-width: fit-content;
+    }
+}
+
+/* BOX ANIMATION */
+.box 
+{
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.box::before 
+{
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+	animation: animate 6s linear infinite;
+}
+.box::after 
+{
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+	animation: animate 6s linear infinite;
+	animation-delay: -3s;
+}
+@keyframes animate 
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
